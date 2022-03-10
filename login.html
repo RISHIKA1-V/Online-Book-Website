@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>E-Commence Website</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+
+
+
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+
+    <script src="https://kit.fontawesome.com/36b3aebb87.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+
+    <nav class="nav nav_top">
+        <div class="logo">
+            <a href=""><img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/100ba615775633.5603915811fae.jpg" width="200px"></a>
+        </div>
+        <div class="nav_side">
+            <a href="about.html">About Us</a>
+            <a href="bestbooks.html">Books</a>
+            <a href="blog.html">Blogs</a>
+            <a href="contact.html">Contact</a>
+            <a href="Login.html">Login</a>
+        </div>
+        <form class="search-form">
+            <input type="text" placeholder="Search">
+            <button>Search</button>
+        </form>
+    </nav>
+
+    <div class="main">
+        <div class="main_content">
+
+
+
+
+            <div class="register">
+
+                <form action="/main" method="POST">
+                    <h2>Register</h2>
+                    <input type="text" name="firstname" placeholder="Your Name" required><br>
+                    <input type="email" name="email" placeholder="Your Email" required><br>
+                    <input type="password" name="psw" placeholder="Enter Password"><br>
+                    <input type="password" name="psw1" placeholder="Confirm Password"><br>
+                    <button type="submit" value="submit" id="submit">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

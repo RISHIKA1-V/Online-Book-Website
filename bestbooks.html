@@ -1,0 +1,615 @@
+<!Doctype html>
+<html>
+
+<head>
+    <title>
+        BestBooks
+    </title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        th {
+            text-align: center;
+        }
+    </style>
+    <script>
+        (function(document) {
+            'use strict';
+
+            var TableFilter = (function(myArray) {
+                var search_input;
+
+                function _onInputSearch(e) {
+                    search_input = e.target;
+                    var tables = document.getElementsByClassName(search_input.getAttribute('data-table'));
+                    myArray.forEach.call(tables, function(table) {
+                        myArray.forEach.call(table.tBodies, function(tbody) {
+                            myArray.forEach.call(tbody.rows, function(row) {
+                                var text_content = row.textContent.toLowerCase();
+                                var search_val = search_input.value.toLowerCase();
+                                row.style.display = text_content.indexOf(search_val) > -1 ? '' : 'none';
+                            });
+                        });
+                    });
+                }
+
+                return {
+                    init: function() {
+                        var inputs = document.getElementsByClassName('search-input');
+                        myArray.forEach.call(inputs, function(input) {
+                            input.oninput = _onInputSearch;
+                        });
+                    }
+                };
+            })(Array.prototype);
+
+            document.addEventListener('readystatechange', function() {
+                if (document.readyState === 'complete') {
+                    TableFilter.init();
+                }
+            });
+
+        })(document);
+    </script>
+
+
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+
+
+
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+
+    <script src="https://kit.fontawesome.com/36b3aebb87.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+
+    <nav class="nav nav_top">
+        <div class="logo">
+            <a href=""><img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/100ba615775633.5603915811fae.jpg" width="200px"></a>
+        </div>
+        <div class="nav_side">
+            <a href="about.html">About Us</a>
+            <a href="bestbooks.html">Best Books</a>
+            <a href="blog.html">Blogs</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html">Login</a>
+        </div>
+        <form class="search-form">
+
+            <input type="text" placeholder="Search" class="form-control search-input" data-table="books-list">
+        </form>
+    </nav>
+
+
+
+
+    <div class="product">
+        <h2>OUR PRODUCTS</h2>
+        <div class="product_container">
+
+
+            <div class="item">
+                <div class="item_img">
+                    <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1298417570l/22463.jpg ">
+                </div>
+                <div class="item_content">
+                    <h3>The Origin of Species by Charles Darwin</h3>
+                    <p> Author: Charles Darwin</p>
+                    <a href="payment.html">Buy Now</a>
+                </div>
+
+
+            </div>
+            <div class="item">
+                <div class="item_img">
+                    <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1348791881l/8049273.jpg">
+                </div>
+                <div class="item_content">
+                    <h3>The Elegant Universe Hidden Dimensions</h3>
+                    <p> Author: Brain Greene</p>
+                    <a href="payment.html">Buy Now</a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item_img">
+                    <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1366758096l/61535.jpg">
+                </div>
+                <div class="item_content">
+                    <h3>Richard Dawkins The Selfish Gene </h3>
+                    <p> Richard Dawkins</p>
+                    <a href="payment.html">Buy Now</a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item_img">
+                    <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1442777442l/4005310._SY475_.jpg">
+                </div>
+                <div class="item_content">
+                    <h3>Why Evolution Is True Jerry A. Coyne</h3>
+                    <p>Author: Chade-Meng </p>
+                    <a href="payment.html">Buy Now</a><br>
+
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="table">
+        <h2>
+            <center>BOOKS LIST</center>
+        </h2>
+        <table style="width: 1500px;" class="table table-striped mt32 books-list">
+            <tr>
+                <td>
+                    <b>Book</b>
+                </td>
+                <td>
+                    <b>Book Name</b>
+                </td>
+                <td>
+                    <b>Type</b>
+                </td>
+                <td>
+                    <b>Author Name</b>
+                </td>
+                <td>
+                    <b>Description</b>
+                </td>
+                <td>
+                    <b>Category</b>
+                </td>
+                <td>
+                    <b>Language</b>
+                </td>
+                <td>
+                    <b>Price</b>
+                </td>
+                <td>
+                    <b>Book Now</b>
+                </td>
+            </tr>
+            <tr>
+                <td><img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1366758096l/61535.jpg" width="150px" height="150px"></td>
+                <td>Richard Dawkins The Selfish Gene</td>
+                <td>Inspirational</td>
+                <td>Richard Dawkins</td>
+                <td>Professor Dawkins articulates a gene's eye view of evolution - a view giving centre stage to these persistent units of information, and in which organisms can be seen as vehicles for their replication. This imaginative, powerful, and stylistically
+                    brilliant work not only brought the insights of Neo-Darwinism to a wide audience, but galvanized the biology community, generating much debate and stimulating whole new areas of research.</td>
+                <td>Others</td>
+                <td>English</td>
+                <td>300</td>
+                <td><a href="payment.html">Availables</a></td>
+            </tr>
+            <tr>
+                <td><img src="https://manybooks.net/sites/default/files/styles/220x330sc/public/old-covers/cover-orig-7032.jpg?itok=SzLOTSG-" width="150px" height="150px"></td>
+                <td>Adventures of Huckleberry Finn</td>
+                <td>Adventures</td>
+                <td>Mark Twain</td>
+                <td>The Adventures of Huckleberry Finn, is a novel by American author Mark Twain, which was first published in the United Kingdom in December 1884 and in the United States in February 1885.</td>
+                <td>Others</td>
+                <td>English</td>
+                <td>340</td>
+                <td><a href="payment.html">Availables</a></td>
+            </tr>
+            <tr>
+                <td><img src="https://manybooks.net/sites/default/files/styles/220x330sc/public/old-covers/cover-orig-13235.jpg?itok=parx4bJU" width="150px" height="150px"></td>
+                <td>The Complete Works of William Shakespeare</td>
+                <td>Inspirational</td>
+                <td>Richard Dawkins</td>
+                <td>William Shakespeare (1564-1616) excels in plot, poetry and wit, and his talent encompasses the tragedies of " hamlet", " king lear", " othello", and " macbeth" as well as history plays and the comedies such as " a Midsummer Night's dream",
+                    and " as you Like it". this volume presents his plays in the chronological order in which they were written</td>
+                <td>Others</td>
+                <td>English</td>
+                <td>400</td>
+                <td><a href="payment.html">Availables</a></td>
+            </tr>
+            <tr>
+                <td><img src="https://manybooks.net/sites/default/files/styles/220x330sc/public/old-covers/cover-orig-5924.jpg?itok=w66aryr_" width="150px" height="150px"></td>
+                <td>The After House</td>
+                <td>Mystery</td>
+                <td>Mary Roberts Rinehart</td>
+                <td>Young Ralph Leslie, the steward aboard a millionaire's yacht, thought his job was smooth sailing--until his dream voyage turned into a nightmare of blood and terror. Only one hand on board seemed strong enough to stop the killer . . .
+                    but to do that he had to stay alive</td>
+                <td>Others</td>
+                <td>English</td>
+                <td>400</td>
+                <td><a href="payment.html">Availables</a></td>
+            </tr>
+            <tr>
+                <td><img src="https://manybooks.net/sites/default/files/styles/220x330sc/public/2019-11/fly_0.jpg?itok=RdSEDNHA" width="150px" height="150px"></td>
+                <td>Fly Away Home</td>
+                <td>Fantacy</td>
+                <td> Dave Cenker</td>
+                <td>A homeless boy who lives in an airport with his father, moving from terminal to terminal trying not to be noticed, is given hope when a trapped bird finally finds his freedom. Full-color illustrations.</td>
+                <td>Others</td>
+                <td>English</td>
+                <td>400</td>
+                <td><a href="payment.html">Availables</a></td>
+            </tr>
+            <tr>
+                <td><img src="https://manybooks.net/sites/default/files/styles/220x330sc/public/2021-01/51G0O4UUvBL.jpg?itok=EMPiBdp9" width="150px" height="150px"></td>
+                <td>Whiskey Witches</td>
+                <td>Action</td>
+                <td> F.J. Blooding</td>
+                <td>Leslie Whiskey is the invisible glue that holds her coven together. Her amazing kitchen witch grandmother. Her two hell-crazy, hormonal, going-to-tear-this-house-down children. Her amazing mundane husband who puts up with all the craziness.</td>
+                <td>Others</td>
+                <td>English</td>
+                <td>400</td>
+                <td><a href="payment.html">Availables</a></td>
+            </tr>
+            <tr>
+                <td><img src="https://manybooks.net/sites/default/files/styles/220x330sc/public/2021-08/51Kz3Z%2B2Q6L.jpeg?itok=UHrdJ3-O" width="150px" height="150px"></td>
+                <td>Fosgate's Game</td>
+                <td>Inspirational</td>
+                <td>David C. Cassidy</td>
+                <td>ward-winning author David C. Cassidy is the twisted mind behind several best-selling novels of horror and suspense, including The Dark, Velvet Rain, and Fosgate's Game. An author, photographer, and graphic designer--and a half-decent juggler--he
+                    spends his writing life creating dark and touching stories where Bad Things Happen To Good People.
+                </td>
+                <td>Others</td>
+                <td>English</td>
+                <td>400</td>
+                <td><a href="payment.html">Availables</a></td>
+            </tr>
+            <tr>
+                <td><img src="https://manybooks.net/sites/default/files/styles/220x330sc/public/old-covers/cover-cust-2292.jpg?itok=Jiyiv8Lm" width="150px" height="150px"></td>
+                <td>The Hound of the Baskervilles</td>
+                <td>Inspirational</td>
+                <td> Arthur Conan Doyle</td>
+                <td>The Hound of the Baskervilles is the third of the four crime novels written by Sir Arthur Conan Doyle featuring the detective Sherlock Holmes. Originally serialised in, The Strand Magazine from August 1901 to April 1902, it is set largely
+                    on Dartmoor in Devon in England's West Country and tells the story of an attempted murder inspired by the legend of a fearsome, diabolical hound of supernatural origin</td>
+                <td>Others</td>
+                <td>English</td>
+                <td>400</td>
+                <td><a href="payment.html">Availables</a></td>
+            </tr>
+            <tr>
+                <td><img src="https://manybooks.net/sites/default/files/styles/220x330sc/public/old-covers/cover-auto-2279.jpg?itok=Rh0r7OPq" width="150px" height="150px"></td>
+                <td>The Adventure of the Cardboard Box</td>
+                <td>Inspirational</td>
+                <td>The Adventure of the Cardboard Box</td>
+                <td>The Adventure of the Cardboard Box" is one of the 56 short Sherlock Holmes stories written by Sir Arthur Conan Doyle. The story was first published in The Strand Magazine in the United Kingdom in January 1893, and in Harper's Weekly in
+                    the United States on 14 January 1893.[1] It is the second of twelve stories collected in The Memoirs of Sherlock Holmes in most British editions of the canon, and the second of the eight stories from His Last Bow in most American versions.</td>
+                <td>Others</td>
+                <td>English</td>
+                <td>400</td>
+                <td><a href="payment.html">Availables</a></td>
+            </tr>
+            <tr>
+                <td><img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1516127989l/34728667.jpg" width="150px" height="150px"></td>
+                <td>Children of Blood and Bone</td>
+                <td>Fantacy</td>
+                <td>Children of Blood and Bone</td>
+                <td>omi Adeyemi is a Nigerian-American writer and creative writing coach based in San Diego, California. Her debut novel, CHILDREN OF BLOOD AND BONE, comes out March 6th, 2018 and the movie is currently in development at Fox with the producers
+                    of Twilight and The Maze Runner attached. </td>
+                <td>Others</td>
+                <td>English</td>
+                <td>400</td>
+                <td><a href="payment.html">Availables</a></td>
+            </tr>
+            <tr>
+                <td><img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1357027589l/14201._SY475_.jpg" width="150px" height="150px"></td>
+                <td>Jonathan Strange & Mr Norrell</td>
+                <td>Fantacy</td>
+                <td>Jonathan Strange & Mr Norrell</td>
+                <td>Sophisticated, witty, and ingeniously convincing, Susanna Clarke's magisterial novel weaves magic into a flawlessly detailed vision of historical England. She has created a world so thoroughly enchanting that eight hundred pages leave
+                    readers longing for more.</td>
+                <td>Others</td>
+                <td>English</td>
+                <td>400</td>
+                <td><a href="payment.html">Availables</a></td>
+            </tr>
+
+            <tr>
+                <td><img src="https://images-eu.ssl-images-amazon.com/images/I/51puz05luHL._SY264_BO1,204,203,200_QL40_FMwebp_.jpg" width="150px" height="150px"></td>
+                <td>Northern Lights (His Dark Materials) Paperback</td>
+                <td>Fantacy</td>
+                <td>Northern Lights (His Dark Materials) Paperback</td>
+                <td>Northern Lights, by best-selling author Philip Pullman, introduces Lyra, the feisty and resourceful heroine of His Dark Materials trilogy. The depth and strength of Lyra's character pulls the reader into this book as she goes in search
+                    of a missing friend and is drawn into a parallel universe where her father has been imprisoned.</td>
+                <td>Others</td>
+                <td>English</td>
+                <td>400</td>
+                <td><a href="payment.html">Availables</a></td>
+
+            </tr>
+
+            <tr>
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/To_Kill_a_Mockingbird_%28first_edition_cover%29.jpg/800px-To_Kill_a_Mockingbird_%28first_edition_cover%29.jpg" width="150px" height="150px"></td>
+                <td>To Kill a Mockingbird </td>
+                <td>novel</td>
+                <td>To Kill a Mockingbird</td>
+                <td>o Kill a Mockingbird is a novel by the American author Harper Lee. It was published in 1960 and was instantly successful. In the United States, it is widely read in high schools and middle schools. To Kill a Mockingbird has become a classic
+                    of modern American literature, winning the Pulitzer Prize.</td>
+                <td>Others</td>
+                <td>English</td>
+                <td>450</td>
+                <td><a href="payment.html">Availables</a></td>
+
+            </tr>
+
+            <tr>
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/The_Great_Gatsby_Cover_1925_Retouched.jpg" width="150px" height="150px"></td>
+                <td>The Great Gatsby</td>
+                <td>novel</td>
+                <td>The Great Gatsby</td>
+                <td>The Great Gatsby is a 1925 novel by American writer F. Scott Fitzgerald. Set in the Jazz Age on Long Island, near New York City, the novel depicts first-person narrator Nick Carraway's interactions with mysterious millionaire Jay Gatsby
+                    and Gatsby's obsession to reunite with his former lover, Daisy Buchanan.</td>
+                <td>Others</td>
+                <td>English</td>
+                <td>500</td>
+                <td><a href="payment.html">Availables</a></td>
+
+            </tr>
+
+            <tr>
+                <td><img src="https://upload.wikimedia.org/wikipedia/en/6/62/BraveNewWorld_FirstEdition.jpg" width="150px" height="150px"></td>
+                <td>Brave New World</td>
+                <td>novel</td>
+                <td>Brave New World</td>
+                <td>Brave New World is a dystopian social science fiction novel by English author Aldous Huxley, written in 1931 and published in 1932.</td>
+                <td>Others</td>
+                <td>English</td>
+                <td>500</td>
+                <td><a href="payment.html">Availables</a></td>
+
+            </tr>
+
+            <tr>
+                <td><img src="https://upload.wikimedia.org/wikipedia/en/6/6b/Harry_Potter_and_the_Philosopher%27s_Stone_Book_Cover.jpg" width="150px" height="150px"></td>
+                <td>Harry Potter and the Philosopher's Stone</td>
+                <td>novel</td>
+                <td>Harry Potter and the Philosopher's Stone</td>
+                <td>Harry Potter and the Philosopher's Stone is a fantasy novel written by British author J. K. Rowling. The first novel in the Harry Potter series and Rowling's debut novel, it follows Harry Potter, a young wizard who discovers his magical
+                    heritage on his eleventh birthday, when he receives a letter of acceptance to Hogwarts School of Witchcraft and Wizardry</td>
+                <td>Others</td>
+                <td>English</td>
+                <td>550</td>
+                <td><a href="payment.html">Availables</a></td>
+
+            </tr>
+
+            <tr>
+                <td><img src="https://images-na.ssl-images-amazon.com/images/I/412McEJ1dcL._SX324_BO1,204,203,200_.jpg" width="150px" height="150px"></td>
+                <td>The Handmaid's Tale: The Graphic Novel</td>
+                <td>novel</td>
+                <td>The Handmaid's Tale: The Graphic Novel</td>
+                <td>The Handmaid's Tale is a dystopian novel by Canadian author Margaret Atwood, published in 1985. It is set in a near-future New England, in a strongly patriarchal, totalitarian theonomic state, known as Republic of Gilead, that has overthrown
+                    the United States government</td>
+                <td>Others</td>
+                <td>English</td>
+                <td>780</td>
+                <td><a href="payment.html">Availables</a></td>
+
+            </tr>
+
+            <tr>
+                <td><img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1451445646l/18143977.jpg" width="150px" height="150px"></td>
+                <td>All the Light We Cannot See</td>
+                <td>novel</td>
+                <td>All the Light We Cannot See</td>
+                <td>Marie-Laure lives in Paris near the Museum of Natural History, where her father works. When she is twelve, the Nazis occupy Paris and father and daughter flee to the walled citadel of Saint-Malo, where Marie-Laure’s reclusive great uncle
+                    lives in a tall house by the sea. With them they carry what might be the museum’s most valuable and dangerous jewel.</td>
+                <td>Others</td>
+                <td>English</td>
+                <td>580</td>
+                <td><a href="payment.html">Availables</a></td>
+
+            </tr>
+
+            <tr>
+                <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Invisible_Man_%281952_1st_ed_jacket_cover%29.jpg/330px-Invisible_Man_%281952_1st_ed_jacket_cover%29.jpg" width="150px" height="150px"></td>
+                <td>Invisible Man</td>
+                <td>novel</td>
+                <td>Invisible Man</td>
+                <td>The Invisible Man is a science fiction novel by H. G. Wells. Originally serialized in Pearson's Weekly in 1897, it was published as a novel the same year. The Invisible Man to whom the title refers is Griffin, a scientist who has devoted
+                    himself to research into optics and who invents a way to change a body's refractive index to that of air so that it neither absorbs nor reflects light.</td>
+                <td>Others</td>
+                <td>English</td>
+                <td>550</td>
+                <td><a href="payment.html">Availables</a></td>
+
+            </tr>
+            <tr>
+                <td><img src="https://upload.wikimedia.org/wikipedia/en/2/2c/GeneYang-AmericanBornChinese-cover.jpg" width="150px" height="150px"></td>
+                <td>American Born Chinese</td>
+                <td>comic</td>
+                <td>American Born Chinese</td>
+                <td>American Born Chinese is a graphic novel by Gene Luen Yang. Released in 2006 by First Second Books, it was a finalist for the 2006 National Book Awards in the category of Young People's Literature.[1] It won the 2007 Michael L. Printz
+                    Award,[2] the 2007 Eisner Award for Best Graphic Album</td>
+                <td>Others</td>
+                <td>English</td>
+                <td>500</td>
+                <td><a href="payment.html">Availables</a></td>
+
+            </tr>
+            <tr>
+                <td><img src="https://upload.wikimedia.org/wikipedia/en/0/03/X-Men_God_Loves_Man_Kills_cover.jpg" width="150px" height="150px"></td>
+                <td>X-Men: God Loves, Man Kills</td>
+                <td>comic</td>
+                <td>X-Men: God Loves, Man Kills</td>
+                <td>According to artist Neal Adams, he was originally approached by Marvel editor-in-chief Jim Shooter to illustrate an early version of X-Men: God Loves, Man Kills (whose plot, according to Adams, was conceived of by Shooter). Since Adams
+                    insisted that his contract not be a standard-work-for-hire agreement, Marvel eventually chose Brent Anderson as the illustrator—despite the fact that Adams had already penciled some preliminary pages.</td>
+                <td>Others</td>
+                <td>English</td>
+                <td>580</td>
+                <td><a href="payment.html">Availables</a></td>
+
+            </tr>
+            <tr>
+                <td><img src="https://images-na.ssl-images-amazon.com/images/I/51RAR-TF41L._SX329_BO1,204,203,200_.jpg" width="150px" height="150px"></td>
+                <td>Batman: Year One Deluxe Edition</td>
+                <td>comic</td>
+                <td>Batman: Year One Deluxe Edition</td>
+                <td>Originally published over four issues in the monthly BATMAN series, this mesmerizing story followed the unprecedented success of Miller’s apocalyptic saga BATMAN: THE DARK KNIGHT RETURNS to become one of the most popular and influential
+                    graphic novels in the history of American comics. By turns brutal, tender, grim and hopeful, Miller and Mazzucchelli’s masterful reimagination of Bruce Wayne’s first year as Gotham City’s champion has electrified generations of readers
+                    with its unprecedented fusion of gritty realism and elegance of form.
+                </td>
+                <td>Others</td>
+                <td>English</td>
+                <td>680</td>
+                <td><a href="payment.html">Availables</a></td>
+
+            </tr>
+
+            <tr>
+                <td><img src="https://upload.wikimedia.org/wikipedia/en/a/a8/Daredevil_Born_Again.jpg" width="150px" height="150px"></td>
+                <td>Born Again (comics)</td>
+                <td>comic</td>
+                <td>Born Again (comics)</td>
+                <td>"Born Again" is a 1986 comic book story arc that appeared in the Marvel Comics series Daredevil. Written by Frank Miller, and drawn by David Mazzucchelli, the storyline first appeared in Daredevil #227–231. It was later reprinted in graphic
+                    novel format along with the previous issue #226, and a follow-up story arc from Daredevil #232–233, which resolves some loose ends from the original story arc. Because of this, this follow-up story arc has become generally considered
+                    part of "Born Again".</td>
+                <td>Others</td>
+                <td>English</td>
+                <td>500</td>
+                <td><a href="payment.html">Availables</a></td>
+
+            </tr>
+
+            <tr>
+                <td><img src="https://upload.wikimedia.org/wikipedia/en/f/f6/Essex_County_cover.jpg" width="150px" height="150px"></td>
+                <td>Essex County Trilogy</td>
+                <td>comic</td>
+                <td>Essex County Trilogy</td>
+                <td>Essex County Trilogy is a collection of three graphic short stories set in Essex County, Ontario by Jeff Lemire published in 2011 by Top Shelf Productions. The three short stories are "Tales from the Farm (2008)," "Ghost Stories (2008),"
+                    and "The Country Nurse (2009)." Two other shorter stories titled "The Essex County Boxing Club" and "The Sad and Lonely Life of Eddie Elephant Ears" are also included</td>
+                <td>Others</td>
+                <td>English</td>
+                <td>580</td>
+                <td><a href="payment.html">Availables</a></td>
+
+            </tr>
+
+            <tr>
+                <td><img src="https://static.wikia.nocookie.net/marvel_dc/images/4/48/Doom_Patrol_Crawling_from_the_Wreckage.jpg/revision/latest/scale-to-width-down/666?cb=20091012025208" width="150px" height="150px"></td>
+                <td>Doom Patrol: Crawling from the Wreckage</td>
+                <td>comic</td>
+                <td>Doom Patrol: Crawling from the Wreckage</td>
+                <td>Written by Grant Morrison; Art by Richard Case, Doug Braithwaite, various; Cover by Brian Bolland This new printing of the first collection of Grant Morrison's DOOM PATROL run includes issues #19 ― 25 of the series, including the restoration
+                    of three story pages omitted from the original printing. Plus, a new cover by Bolland.</td>
+                <td>Others</td>
+                <td>English</td>
+                <td>580</td>
+                <td><a href="payment.html">Availables</a></td>
+
+            </tr>
+
+            <tr>
+                <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6n4mDZPYBLu-gMBbPXfyCRezPKi4QZRTAnHnv0cZj&usqp=CAE&s" width="150px" height="150px"></td>
+                <td>Batman: Knightfall</td>
+                <td>comic</td>
+                <td>Batman: Knightfall</td>
+                <td>The villainous Bane breaks the Bat in one of the most popular and well-known Batman tales! The inmates of Arkham Asylum have broken free and Batman must push himself to the limits to re-apprehend the Joker, Poison Ivy, the Riddler, Killer
+                    Croc and more. Pushed to the limits, he comes face-to-face against the monstrosity known as Bane, who delivers a crippling blow destined to change the Caped Crusader forever!</td>
+                <td>Others</td>
+                <td>English</td>
+                <td>550</td>
+                <td><a href="payment.html">Availables</a></td>
+
+            </tr>
+
+            <tr>
+                <td><img src="https://upload.wikimedia.org/wikipedia/en/8/86/TheLionWitchWardrobe%281stEd%29.jpg" width="150px" height="150px"></td>
+                <td>The Lion, the Witch and the Wardrobe</td>
+                <td>Fantacy</td>
+                <td>The Lion, the Witch and the Wardrobe</td>
+                <td>The Lion, the Witch and the Wardrobe is a fantasy novel for children by C. S. Lewis, published by Geoffrey Bles in 1950. It is the first published and best known of seven novels in The Chronicles of Narnia (1950–1956). Among all the author's
+                    books, it is also the most widely held in libraries.[2] Although it was originally the first of The Chronicles of Narnia, it is volume two in recent editions that are sequenced by the stories' chronology.</td>
+                <td>Others</td>
+                <td>English</td>
+                <td>580</td>
+                <td><a href="payment.html">Availables</a></td>
+
+            </tr>
+
+            <tr>
+                <td><img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1270352123l/186074.jpg" width="150px" height="150px"></td>
+                <td>The Name of the Wind</td>
+                <td>Fantacy</td>
+                <td>The Name of the Wind</td>
+                <td>The Name of the Wind, also called The Kingkiller Chronicle: Day One, is a heroic fantasy novel written by American author Patrick Rothfuss. It is the first book in the ongoing fantasy trilogy The Kingkiller Chronicle, followed by The Wise
+                    Man's Fear. It was published on March 27, 2007, by DAW Books.</td>
+                <td>Others</td>
+                <td>English</td>
+                <td>450</td>
+                <td><a href="payment.html">Availables</a></td>
+
+            </tr>
+
+            <tr>
+                <td><img src="https://upload.wikimedia.org/wikipedia/en/4/49/American_gods.jpg" width="150px" height="150px"></td>
+                <td>American Gods</td>
+                <td>Fantacy</td>
+                <td>American Gods</td>
+                <td>Days before his release from prison, Shadow's wife, Laura, dies in a mysterious car crash. Numbly, he makes his way back home. On the plane, he encounters the enigmatic Mr Wednesday, who claims to be a refugee from a distant war, a former
+                    god and the king of America.</td>
+                <td>Others</td>
+                <td>English</td>
+                <td>580</td>
+                <td><a href="payment.html">Availables</a></td>
+
+            </tr>
+
+            <tr>
+                <td><img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1516127989l/34728667.jpg" width="150px" height="150px"></td>
+                <td>Children of Blood and Bone</td>
+                <td>Fantacy</td>
+                <td>Children of Blood and Bone</td>
+                <td>Zélie Adebola remembers when the soil of Orïsha hummed with magic. Burners ignited flames, Tiders beckoned waves, and Zélie’s Reaper mother summoned forth souls.</td>
+                <td>Others</td>
+                <td>English</td>
+                <td>500</td>
+                <td><a href="payment.html">Availables</a></td>
+
+            </tr>
+
+            <tr>
+                <td><img src="data:image/jpeg;base64,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"
+                        width="150px" height="150px"></td>
+                <td>The Colour of Magic</td>
+                <td>Fantacy</td>
+                <td>The Colour of Magic</td>
+                <td>The Colour of Magic is a 1983 fantasy comedy novel by Terry Pratchett, and is the first book of the Discworld series. The first printing of the British edition consisted of only 506 copies. Pratchett has described it as "an attempt to
+                    do for the classical fantasy universe what Blazing Saddles did for Westerns.</td>
+                <td>Others</td>
+                <td>English</td>
+                <td>550</td>
+                <td><a href="payment.html">Availables</a></td>
+
+            </tr>
+
+        </table>
+    </div>
+
+
+
+</body>
+
+
+</html>

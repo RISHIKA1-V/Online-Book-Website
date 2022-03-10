@@ -1,0 +1,665 @@
+.nav {
+    background-color: rgba(235, 237, 239);
+    z-index: 9;
+    padding: 5px;
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
+    box-shadow: black;
+}
+
+.nav_top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.logo {
+    padding: 10px;
+    margin: 40;
+    width: 40%;
+    float: left;
+}
+
+.logo img {
+    padding: 5px;
+    float: left;
+    font-size: 60px;
+}
+
+.nav_side {
+    float: right;
+    background-color: rgba(235, 237, 239);
+    line-height: 100px;
+    box-shadow: black;
+}
+
+.nav_side a {
+    text-size-adjust: 10px;
+    text-decoration: none;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin: 0 20px;
+    padding-top: 20px;
+    color: black;
+    font-weight: bold;
+    font-family: cosmic, sans-serif;
+    font-size: 15px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: right;
+}
+
+.nav_side a:hover {
+    color: rgb(22, 22, 219);
+    transition: all 1s ease;
+}
+
+.search-form {
+    margin-top: 35px;
+    float: right;
+    margin-right: 100px;
+    size: 0mm;
+}
+
+input [type=text] {
+    padding: 0px;
+    border: none;
+    font-size: 16px;
+    font-family: sans-serif;
+    width: 100px;
+}
+
+button {
+    float: right;
+    background: blue;
+    color: white;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    position: relative;
+    font-family: cosmic, sans-serif;
+    border: none;
+    font-size: 16px;
+}
+
+.main {
+    background-image: url('https://misf.org/wp-content/uploads/2017/12/example-slide-350-3.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: auto;
+    height: 100vh;
+}
+
+.main .main_content {
+    padding-top: 16%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.main .main_content h2 {
+    color: white;
+    font-size: 50px;
+    font-family: 'Staatliches', cursive;
+    font-weight: border;
+    text-align: center;
+}
+
+.main .main_content h2 span {
+    font-size: 15px;
+    opacity: 0.9;
+    color: black;
+    font-weight: lighter;
+    line-height: 20px;
+}
+
+.main .main_content .btn {
+    margin-top: 90px;
+    margin-left: 600px;
+}
+
+.main .main_content .btn a {
+    text-align: center;
+    text-decoration: none;
+    margin: 50px;
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    font-family: cosmi, sans-serif;
+    border: 2px solid white;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+.main .main_content .btn a:hover {
+    background-color: white;
+    color: rgba(44, 62, 80);
+    border: none;
+    border-bottom: 4px solid blue;
+    transition: 0.5;
+}
+
+.product {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    margin-top: 60px;
+}
+
+.product h2 {
+    color: rgb(8, 8, 99);
+    font-size: 35px;
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+}
+
+.product .product_container {
+    display: flex;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.product .product_container .item {
+    width: 33.33%;
+    margin: 10px;
+    height: auto;
+}
+
+.product .product_container .item:hover {
+    box-shadow: 0px 3px 65px 0px rgba(0, 0, 0, .15);
+}
+
+.product .product_container .item .item_img {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.product .product_container .item .item_img img {
+    width: 50%;
+    height: 250px;
+}
+
+.product .product_container .item .item_content {
+    text-align: center;
+}
+
+.product .product_container .item .item_content h3 {
+    padding: 10px;
+    font-size: 25px;
+    font-family: cosmic, sans-serif;
+}
+
+.product .product_container .item .item_content p {
+    padding: 10px;
+    font-size: 25px;
+    font-family: cosmic, sans-serif;
+}
+
+.product .product_container .item .item_content a {
+    text-align: center;
+    text-decoration: none;
+    margin: 50px;
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    font-family: cosmi, sans-serif;
+    border: 2px solid white;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+.product .product_container .item .item_content a:hover {
+    background-color: white;
+    color: black;
+    border: none;
+    border-bottom: 4px solid blue;
+    transition: 0.5;
+}
+
+.product .product_btn {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.product .product_btn a {
+    text-align: center;
+    text-decoration: none;
+    margin: 50px;
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    font-family: cosmi, sans-serif;
+    border: 2px solid white;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+.product .product_btn a:hover {
+    background-color: white;
+    color: black;
+    border: none;
+    border-bottom: 4px solid blue;
+    transition: 0.5;
+}
+
+.keypoint {
+    padding: 50px;
+}
+
+.keypoint h2 {
+    color: rgb(8, 8, 99);
+    font-size: 35px;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.keypoint .key_container {
+    display: flex;
+}
+
+.keypoint .key_container .key_content {
+    width: 60%;
+    padding: 20px;
+    float: left;
+}
+
+.keypoint .key_container .key_content li {
+    list-style: none;
+    margin: 10px;
+    padding: 10px;
+    border-left: 2px solid orange;
+    color: black;
+    text-align: left;
+    font-family: cosmic, sans-serif;
+    box-shadow: 0px 3px 65px 0px rgba(0, 0, 0, .15);
+}
+
+.keypoint .key_container .key_img {
+    width: 60%;
+    float: right;
+    margin-left: 100px;
+}
+
+.keypoint .key_container .key_img {
+    width: 100%
+}
+
+.testi {
+    display: inline;
+    padding: 50%;
+}
+
+.testi h2 {
+    color: rgb(8, 8, 99);
+    font-size: 40px;
+    text-align: center;
+    padding: 10px;
+    text-transform: uppercase;
+    word-spacing: 20px;
+    font-weight: bold;
+}
+
+.testi .testi_container {
+    margin-right: 10%;
+    margin-left: 10%;
+    text-align: center;
+}
+
+.testi .testi_container .carousel-inner {
+    background-color: blue;
+    box-shadow: purple;
+}
+
+.testi .testi_container .item {
+    width: 97%;
+    margin: 20px;
+    background-color: white;
+    box-shadow: none;
+}
+
+.testi .testi_container .item .item_img {
+    width: 100%;
+    height: 250px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.testi .testi_container .item .item_img img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: 90px;
+}
+
+.testi .testi_container .item .item_content {
+    text-align: center;
+}
+
+.testi .testi_container .item .item_content h3 {
+    padding: 10px;
+    font-size: 25px;
+    font-family: cosmic, sans-serif;
+}
+
+.testi .testi_container .item .item_content p {
+    padding: 10px;
+    font-size: 15px;
+    font-family: cosmic, sans-serif;
+}
+
+.team {
+    padding: 50px;
+}
+
+.team h2 {
+    color: rgb(8, 8, 99);
+    font-size: 40px;
+    text-align: center;
+    padding: 10px;
+    text-transform: uppercase;
+    word-spacing: 20px;
+    font-weight: bold;
+}
+
+.team .team_container {
+    display: flex;
+}
+
+.team .team_container .team_video {
+    width: 50%;
+    padding: 20px;
+}
+
+.team .team_container .team_video iframe {
+    width: 100%;
+    border: 10px solid rgb(130, 130, 212);
+    outline: none;
+    margin-top: 25px;
+}
+
+.team .team_container .team_content {
+    width: 40%;
+    padding: 20px;
+    margin-right: 50px;
+}
+
+.team .team_container .team_content p {
+    padding: 10px;
+    font-size: 15px;
+    font-family: cosmic, sans-serif;
+}
+
+.feedback {
+    background-image: url('https://images.unsplash.com/photo-1584890132374-d69d5d01483e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGNvbmZldHRpfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80');
+    background-size: 200%;
+    padding: 50px;
+    padding-top: 5px;
+}
+
+.feedback h2 {
+    color: white;
+    font-weight: bold;
+    font-size: 35px;
+    text-align: center;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+.feedback .feedback_form {
+    text-align: center;
+    margin-top: 0px;
+}
+
+.feedback .feedback_form form {
+    padding: 30px;
+}
+
+.feedback .feedback_form form input {
+    width: 30%;
+    margin: 10px;
+    padding: 10px;
+    outline: none;
+    border: blue;
+}
+
+.feedback .feedback_form form textarea {
+    width: 30%;
+    margin: 10px;
+    padding: 10px;
+    outline: none;
+    border: none;
+}
+
+.feedback .feedback_form form button {
+    width: 30%;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    margin-left: 100px;
+    background-color: yellow;
+    color: black;
+    font-family: cosmic, sans-serif;
+    border: 2px solid white;
+    border-radius: 10px;
+    transition: .5s;
+    margin-right: 480px;
+}
+
+.feedback .feedback_form form button:hover {
+    background-color: white;
+    border: none;
+    color: blue;
+    border-bottom: 4px solid blue;
+    transition: 0.5s;
+}
+
+.about_us {
+    padding: 100px;
+    margin-top: 100px;
+}
+
+.about_us h2 {
+    color: rgb(25, 25, 124);
+    font-size: 35px;
+    text-align: center;
+    padding: 10px;
+    font-family: cosmic, sans-serif;
+    text-transform: uppercase;
+}
+
+.about_us p {
+    padding: 10px;
+    font-size: 13px;
+    text-align: center;
+    font-family: cosmic, sans-serif;
+    line-height: 25px;
+}
+
+.contact_container {
+    padding: 100px;
+    margin-top: 50px;
+}
+
+.contact_container h2 {
+    color: rgb(39, 39, 165);
+    font-size: 35px;
+    text-align: center;
+    padding: 10px;
+    font-family: cosmic, sans-serif;
+    text-transform: uppercase;
+}
+
+.contact_container .g_map {
+    border: 10px solid rgb(5, 5, 117);
+}
+
+.contact_container .contact_content {
+    padding: 20px;
+}
+
+.contact_container .contact_content p {
+    padding: 10px;
+    font-size: 13px;
+    text-align: center;
+    font-family: cosmic, sans-serif;
+    line-height: 25px;
+}
+
+.logo img {
+    padding: 10px;
+}
+
+.register {
+    margin-top: 0px;
+    padding: 50px;
+    margin-left: 450px;
+}
+
+.register form {
+    margin: 20px;
+    padding: 40px;
+    box-shadow: 1px 1px 16px black;
+    width: 50%;
+    text-align: center;
+}
+
+.register form h2 {
+    font-size: 25px;
+    color: blue;
+    font-family: cosmic, sans-serif;
+}
+
+.register form input {
+    width: 90%;
+    margin: 10px;
+    padding: 5px;
+}
+
+.register form button {
+    margin-right: 200px;
+}
+
+.table h2 {
+    font-weight: bold;
+    color: blue
+}
+
+.text {
+    text-align: left;
+    margin-top: -500px;
+    margin-left: 600px;
+}
+
+footer {
+    margin-top: 200px;
+    background-color: #99A3A4;
+    padding: 50px;
+    margin-bottom: 10px;
+}
+
+footer .logo {
+    width: 90px;
+}
+
+footer .pages {
+    text-align: center;
+    margin-top: 100px;
+}
+
+footer .pages h3 {
+    color: black;
+    font-size: 20px;
+    font-family: cosmic, sans-serif;
+    padding: 5px;
+}
+
+footer .pages a {
+    text-decoration: none;
+    margin: 10px;
+    color: blue;
+    font-size: 15px;
+    font-family: cosmic, sans-serif;
+}
+
+footer .pages a:hover {
+    color: white;
+}
+
+footer .doc {
+    text-align: center;
+}
+
+footer .doc h3 {
+    color: black;
+    font-size: 20px;
+    font-family: cosmic, sans-serif;
+    padding: 5px;
+}
+
+footer .doc a {
+    text-decoration: none;
+    margin: 10px;
+    color: blue;
+    font-size: 15px;
+    font-family: cosmic, sans-serif;
+}
+
+footer .doc a:hover {
+    color: white;
+}
+
+footer .social {
+    text-align: center;
+}
+
+footer .social h3 {
+    color: black;
+    font-size: 20px;
+    font-family: cosmic, sans-serif;
+    padding: 5px;
+}
+
+footer .social a {
+    text-decoration: none;
+    margin: 10px;
+    color: blue;
+    font-size: 20px;
+    font-family: cosmic, sans-serif;
+}
+
+footer .social a:hover {
+    color: white;
+}
+
+footer .contact {
+    text-align: center;
+}
+
+footer .contact h3 {
+    color: black;
+    font-size: 20px;
+    font-family: cosmic, sans-serif;
+    padding: 5px;
+}
+
+footer .contact a {
+    text-decoration: none;
+    margin: 10px;
+    color: blue;
+    font-size: 20px;
+    font-family: cosmic, sans-serif;
+}
+
+footer .contact a:hover {
+    color: white;
+}
+
+.table {
+    margin-top: 90px;
+}

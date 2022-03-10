@@ -1,0 +1,31 @@
+.register {
+    margin-top: 0px;
+    padding: 50px;
+    margin-left: 450px;
+    margin-bottom: 200px;
+}
+
+.register form {
+    margin: 20px;
+    padding: 40px;
+    box-shadow: 1px 1px 16px black;
+    width: 50%;
+    text-align: center;
+}
+
+.register form h2 {
+    font-size: 25px;
+    color: blue;
+    text-align: center;
+    font-family: cosmic, sans-serif;
+}
+
+.register form input {
+    width: 90%;
+    margin: 10px;
+    padding: 5px;
+}
+
+.register form button {
+    margin-right: 400px;
+}
